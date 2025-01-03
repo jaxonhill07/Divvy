@@ -1,0 +1,97 @@
+  runApp(PaymentApp());
+}
+
+class PaymentApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Receipt Splitter',
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: HomeScreen(),
+    );
+  }
+}
+
+class HomeScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Receipt Splitter')),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => ScanScreen()));
+              },
+              child: Text('Start New Transaction'),
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {},
+              child: Text('View Past Transactions'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class ScanScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Scan Receipt')),
+      body: Center(
+        child: Text('Scan Screen Placeholder'),
+      ),
+    );
+  }
+}
+
+// Placeholder for other screens
+class ItemAssignmentScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Item Assignment')),
+      body: Center(
+        child: Text('Item Assignment Screen Placeholder'),
+      ),
+    );
+  }
+}
+
+class ReviewScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Review Split')),
+      body: Center(
+        child: Text('Review Screen Placeholder'),
+      ),
+    );
+  }
+}
+
+class PaymentScreen extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Payment Summary')),
+      body: Center(
+        child: Text('Payment Screen Placeholder'),
+      ),
+    );
+  }
+}
+"""
+
+# Save the starter code to a file for download
+file_path = "/mnt/data/receipt_splitter_starter_code.dart"
+with open(file_path, "w") as file:
+    file.write(starter_code)
+
+file_path
